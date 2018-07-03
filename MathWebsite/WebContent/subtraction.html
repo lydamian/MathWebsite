@@ -7,7 +7,8 @@
 	
 	<!-- Native CSS stylesheet -->
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
-<title>Damians Math Website Homepage</title>
+
+<title>Insert title here</title>
 </head>
 <body>
 	<!--  NavBar -->
@@ -20,7 +21,7 @@
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	        </button>
-	        <a href="#" class="navbar-brand">Home</a>
+	        <a href="index.html" class="navbar-brand">Home</a>
 	    </div>
 	    <!-- Collection of nav links and other content for toggling -->
 	    <div id="navbarCollapse" class="collapse navbar-collapse">
@@ -35,36 +36,33 @@
 	    </div>
 	</nav>
 
-	<!-- Header -->
+
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
-				<h1> Damians Math Website Homepage </h1>
+				<h1> Subtraction Home Page </h1>
 			</div>
 		</div>
 		
-		<!-- Links to Math Operation Pages -->
-	    <div class="row">
-		    <div class="col-lg-3" id="plus_button">
-		   		<a href="addition.html" class="operator_buttons">Addition</a>
-		    </div>
-	        <div class="col-lg-3" id="minus_button">
-       	 		<a href="subtraction.html" class="operator_buttons">Subtraction</a>
-       		</div>
-        	<div class="col-lg-3" id="times_button">
-       			<a href="multiplication.html" class="operator_buttons">Multiplication</a>
-       		</div>
-       		<div class="col-lg-3" id="division_button">
-       			<a href="division.html" class="operator_buttons">Division</a>
-     	   	</div>
-	    </div>
+		<div class="row">
+			<div class="col-lg-6">
+				<form action="addition.js">
+					Type of Addition:<br/>
+					<input type="radio" name="single" value="single" checked> Single Digit Addition<br>
+					<input type="radio" name="multiple" value="multiple"> Multiple Digit Addition Without Renaming<br>
+					<input type="radio" name="multiple_rename" value="multiple_rename"> Multiple Digit Addition With Renaming<br><br>
+					Number of Problems: <br/>
+					<select name="num_problems">
+						<option value="five">5</option>
+						<option value="ten">10</option>
+						<option value="fifteen">15</option>
+						<option value="twenty">20</option>
+					</select> 
+					<br/><br/>
+					<input type="submit" name="submit">
+				</form>
+			</div>
+		</div>
 	</div>
-	
-	
-	<!-- jQuery library -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	
-	<!-- Latest compiled JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
 </body>
 </html>

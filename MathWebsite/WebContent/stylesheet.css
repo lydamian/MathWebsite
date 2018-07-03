@@ -1,2 +1,30 @@
 @charset "ISO-8859-1";
 
+#plus_button{
+	background-color:#3674f7;
+	padding:20px;
+	text-align:center;
+}
+
+#minus_button{
+	background-color:#3cb030;
+	padding:20px;
+	text-align:center;
+}
+
+#times_button{
+	background-color:#cc2ed1;
+	padding:20px;
+	text-align:center;
+}
+
+#division_button{
+	background-color:#ff3300;
+	padding:20px;
+	text-align:center;
+}
+
+.operator_buttons{
+	color:white;
+}
+
