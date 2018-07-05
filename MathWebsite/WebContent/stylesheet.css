@@ -1,26 +1,31 @@
 @charset "ISO-8859-1";
 
+h1{
+	text-align:center;
+}
+
+
 #plus_button{
 	background-color:#3674f7;
-	padding:20px;
+	padding:55px;
 	text-align:center;
 }
 
 #minus_button{
 	background-color:#3cb030;
-	padding:20px;
+	padding:55px;
 	text-align:center;
 }
 
 #times_button{
 	background-color:#cc2ed1;
-	padding:20px;
+	padding:55px;
 	text-align:center;
 }
 
 #division_button{
 	background-color:#ff3300;
-	padding:20px;
+	padding:55px;
 	text-align:center;
 }
 
@@ -28,3 +33,19 @@
 	color:white;
 }
 
+.operation_info{
+	background-color: #d3d7f2;
+	padding: 80px;
+	border-style:solid;
+	border-width:1px;
+	border-color:black;
+}
+
+.row.match-my-cols {
+    overflow: hidden; 
+}
+
+.row.match-my-cols [class*="col-"]{
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}
