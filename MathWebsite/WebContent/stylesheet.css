@@ -1,5 +1,33 @@
 @charset "ISO-8859-1";
 
+
+/* imported CSS stylesheet */
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+/* In our demo, the footers are fixed to the bottom of the page */
+
+footer{
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+	padding: 10px;
+}
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+/* imported css stylesheet end*/
+
+.operator-top{
+	background-color: #e3dfed;
+	padding:20px;
+}
+.operator-bottom{
+	background-color: #b2edbe;
+	padding:20px;
+}
+
 h1{
 	text-align:center;
 }
@@ -48,4 +76,13 @@ h1{
 .row.match-my-cols [class*="col-"]{
     margin-bottom: -99999px;
     padding-bottom: 99999px;
+}
+
+#login{
+	text-align:center;
+	background-color: rgba(72,254,244,0.28);
+}
+
+.answer_form{
+	display: inline-block;
 }

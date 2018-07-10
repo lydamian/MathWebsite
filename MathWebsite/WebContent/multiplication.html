@@ -12,7 +12,7 @@
 </head>
 <body>
 	<!--  NavBar -->
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-inverse">
 	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">
 	        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
@@ -26,12 +26,19 @@
 	    <!-- Collection of nav links and other content for toggling -->
 	    <div id="navbarCollapse" class="collapse navbar-collapse">
 	        <ul class="nav navbar-nav">
-	            <li class="active"><a href="index.html">What to Learn?</a></li>
-	            <li><a href="#">Profile</a></li>
-	            <li><a href="#">Messages</a></li>
+	            <li class="dropdown">
+				    <a href="#" data-toggle="dropdown" class="dropdown-toggle"> Practice Arithmetic! <b class="caret"></b></a>
+				    <ul class="dropdown-menu">
+				        <li><a href="addition.html">Addition</a></li>
+				        <li><a href="subtraction.html">Subtraction</a></li>
+				        <li><a href="multiplication.html">Multiplication</a></li>
+				        <li><a href="division.html">Division</a></li>
+				    </ul>
+				</li>
+	            <li><a href="profile.html">Profile</a></li>
 	        </ul>
 	        <ul class="nav navbar-nav navbar-right">
-	            <li><a href="login.html">Login</a></li>
+	            <li><a href="login.html" target="_blank">Login</a></li>
 	        </ul>
 	    </div>
 	</nav>
@@ -83,5 +90,11 @@
 		
 		
 	</div>
+	
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
