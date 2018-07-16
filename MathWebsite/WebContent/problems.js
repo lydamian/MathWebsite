@@ -23,15 +23,12 @@ function na(num_problems){
 		console.log("y is: " + y);
 		
 		//generating html content for question and form value
-		var question = i + ") " + x + " + " + y + " = ";
+		var question = (num_problems - i) + ") " + x + " + " + y + " = ";
 		var input_str = "<input type=number name="+ x + "+" + y + ">";
 			
-		var markup = "<tr>" + 
-			"<td>" + question + "<form action=# class=answer_form>" + input_str + "</form>" + "</td>";
-			"</tr>";
-		
+		var markup = question + input_str + "<br/>";
 		//appending html elements to table.
-		$("#addition_table").append(markup);
+		$("#problems").prepend(markup);
 		
 		counter++;
 	}
@@ -87,7 +84,7 @@ function multiple(num_problems){
 		//generating html content for question and form value
 		var question = i + ") " + x + " + " + y + " = ";
 		var input_str = "<input type=\"number\" name=" + x + "+" + y + ">" + "</input>";
-			
+		
 		var markup = "<tr>" + 
 			"<td>" + question + "<form action=\"#\" class=\"answer_form\">" + input_str + "</form>" + "</td>";
 			"</tr>";
@@ -162,8 +159,21 @@ else{
 	multiple_rename(num_problems);
 }
 
-function submit_answers(){
-	console.log("submit_answers function called...");	
+// this function is called when the user submits their answers for addition
+function submit_answers(form){
+	console.log("submit_answers function called...");
+	var mydata = "";
+	var jsonObj = "";
+	var myform = document.getElementById("problems").elements;
+	
+	for(var i = 0; i < myform.length; i++ ){
+		console.log("name is: " + myform[i].name + " value is: " + myform[i].value);
+	mydata = myform[i].name + "=" + myform[i].value;
+	jsonObj += mydata + ",";
+	}
+	
+	jsonObj = jsonObj.substring(0, jsonObj.length -1);
+	console.log(jsonObj);
 }
 
 
