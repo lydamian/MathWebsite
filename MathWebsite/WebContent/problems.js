@@ -160,21 +160,27 @@ else{
 }
 
 // this function is called when the user submits their answers for addition
+
 function submit_answers(form){
 	console.log("submit_answers function called...");
 	var mydata = "";
 	var jsonObj = "";
 	var myform = document.getElementById("problems").elements;
 	
-	for(var i = 0; i < myform.length; i++ ){
+	for(var i = 0; i < myform.length -1; i++ ){
 		console.log("name is: " + myform[i].name + " value is: " + myform[i].value);
 	mydata = myform[i].name + "=" + myform[i].value;
-	jsonObj += mydata + ",";
+	jsonObj += mydata + "&";
 	}
 	
-	jsonObj = jsonObj.substring(0, jsonObj.length -1);
+	jsonObj = jsonObj.substr(0, jsonObj.length-1);
 	console.log(jsonObj);
+	var newURL = "http://localhost:8080/MathWebsite/results.html?" + jsonObj;
+	console.log(newURL);
+	window.location.assign(newURL);
 }
+
+
 
 
 
