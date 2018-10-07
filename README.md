@@ -1,7 +1,7 @@
 # MathWebsite
 Author: Damian Ly
 
-Objective: To create a website that will people of all ages and backgrounds to practice basic arithmetic such as addition,
+Objective: To create a website that will allow people of all ages and backgrounds to practice basic arithmetic such as addition,
 subtraction, multiplication and division.
 
 Features:
