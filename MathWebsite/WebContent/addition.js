@@ -3,7 +3,6 @@
  */
 
 console.log("addition.js page called...");
-//global variables
 
 // SELECT FORM VALUES
 function getResult(form){
@@ -16,7 +15,7 @@ function getResult(form){
 	console.log("num_problems: " + num_problems);
 	
 	//checking assigning values to a new page
-	window.location.assign("http://localhost:8080/MathWebsite/problems.html?type="+type+"&num_problems="+num_problems);
+	window.location.assign("http://localhost:8080/MathWebsite/additionproblems.html?type="+type+"&num_problems="+num_problems);
 }
 
 	

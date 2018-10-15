@@ -4,6 +4,10 @@
 
 console.log("results.js page called..." );
 
+function gotohomepage(){
+	location.assign("index.html");
+}
+
 var queryString = window.location.search;
 queryString = queryString.substring(1, queryString.length);
 console.log(queryString);
@@ -24,12 +28,19 @@ for(var i = 0; i < mydata.length; i++){
 	console.log("the user answer is: " + user_answer);
 	if(eval(question) == user_answer){
 		numRight++;
+		
 		var betterfmt = question.split("+").join(" + ");
-		answers.append("<p>" + i + ") " + betterfmt+ " = " + eval(question) + "</p>");
+		betterfmt = question.split("-").join(" - ");
+		betterfmt = question.split("*").join(" * ");
+		betterfmt = question.split("/").join(" / ");
+		
+		
+		
+		answers.append("<p class=h4>" + (i+1) + ") " + betterfmt+ " = " + eval(question) + "</p>");
 	}
 	else{
 		var betterfmt = question.split("+").join(" + ");
-		answers.append("<p class=text-danger>" + i + ") " + betterfmt + " = " + eval(question) + "</p>");
+		answers.append("<span class='text-danger h4'>" + (i+1) + ") " + betterfmt + " = " + user_answer + "</span>" + "<span style=color:green; class=h4> The right answer was: " + eval(question) + "</span> <br/>");
 	}
 }
 score.append(numRight + "/" + mydata.length);

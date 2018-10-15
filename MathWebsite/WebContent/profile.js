@@ -19,8 +19,5 @@ function startup_code(){
 	}
 }
 
-
-
-
 //============== MAIN BODY ====================================
 window.onload = startup_code;
